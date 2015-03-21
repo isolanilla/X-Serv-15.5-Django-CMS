@@ -18,5 +18,4 @@ def cms(request, recurso):
     if request.method == "PUT":
         p = Pages(name=recurso, page=request.body)
         p.save()
-        HttpResponseNotFound
         return HttpResponse("Pagina guardada: " + request.body)
